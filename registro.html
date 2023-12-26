@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Avatar - Registre-se</title>
+    <link rel="stylesheet" href="loginEregistro.css">
+    <link rel="shortcut icon" href="EEL_INFOCREATIONSS.ico">
+    <style>
+      
+    </style>
+    <script>
+        function validarFormulario() { /*validação*/
+            var nome = document.querySelector('input[name="nome"]').value;
+            var email = document.querySelector('input[name="email"]').value;
+            var senha = document.querySelector('input[name="senha"]').value;
+            var dataNascimento = document.querySelector('input[name="dataNascimento"]').value;
+
+
+            if (nome === "") {
+                alert("Por favor, preencha o campo Nome.");
+                return false;
+            }
+
+            if (email === "") {
+                alert("Por favor, preencha o campo Email.");
+                return false;
+            } else if (!email.match(emailRegex)) {
+                alert("Por favor, insira um endereço de e-mail válido.");
+                return false;
+            }
+
+            if (senha === "") {
+                alert("Por favor, preencha o campo Senha.");
+                return false;
+            }
+
+            if (dataNascimento === "") {
+                alert("Por favor, preencha o campo Data de Nascimento.");
+                return false;
+            }
+            alert("Registro bem-sucedido! Volte para a tela de login.");
+
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <section> 
+         <!-- pagina registro inicio -->
+        <form onsubmit="return validarFormulario();"> 
+            <h1>Login</h1>
+            <div class="inputbox">
+                <input type="text" name="nome">
+                <label for="nome">Nome</label>
+            </div>
+            <div class="inputbox">
+                <input type="email" name="email">
+                <label for="email">Email</label>
+            </div>
+            <div class="inputbox">
+                <input type="password" name="senha">
+                <label for="senha">Crie uma senha</label>
+            </div>
+            <div class="inputbox">
+                <input type="date" name="dataNascimento">
+                <label for="dataNascimento">Data de Nascimento</label>
+            </div>
+            <button type="submit">Registrar-se</button>
+            <div class="register">
+                <p>Voltar para <a href="login.html">Login</a></p>
+            </div>
+        </form>
+         <!-- pagina login fim -->
+    </section>
+</body>
+
+</html>

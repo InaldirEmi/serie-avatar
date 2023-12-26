@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar - Login</title>
+
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="loginEregistro.css">
+        <link rel="shortcut icon" href="EEL_INFOCREATIONSS.ico">
+        <script> 
+            function validarFormulario() { /*validação*/
+                var email = document.querySelector('.inputbox input[type="email"]').value;
+                var senha = document.querySelector('.inputbox input[type="password"]').value;
+
+                if (email.trim() === "") {
+                    alert("Por favor, preencha o campo de Email.");
+                    return false;
+                }
+
+                if (senha.trim() === "") {
+                    alert("Por favor, preencha o campo de Senha.");
+                    return false;
+                }
+
+
+                window.location.href = "index.html";
+
+                return false;
+            }
+        </script>
+    </head>
+
+<body>
+     <!-- pagina login inicio -->
+    <section>
+        <form onsubmit="return validarFormulario();">
+            <h1>Login</h1>
+            <div class="inputbox">
+                <input type="email">
+                <label for="">Email</label>
+            </div>
+            <div class="inputbox">
+                <input type="password">
+                <label for="">Senha</label>
+            </div>
+
+            <button type="submit">Entrar</button>
+
+            <div class="register">
+                <p>Não tem conta? <a href="registro.html">Registre-se</a></p>
+            </div>
+        </form>
+    </section>
+     <!-- pagina login fim -->
+</body>
+
+</html>
